@@ -16,7 +16,7 @@ const Home = () => {
     } else {
       const fetchBlogs = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/api/blogs', {
+          const response = await axios.get('https://backendbloggy.onrender.com/api/blogs', {
             headers: { Authorization: `Bearer ${token}` },
           });
           setBlogs(response.data);

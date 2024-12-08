@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   const fetchBlogs = () => {
     axios
-      .get('http://localhost:5000/api/blogs/my-blogs', { headers: { Authorization: `Bearer ${token}` } })
+      .get('https://backendbloggy.onrender.com/api/blogs/my-blogs', { headers: { Authorization: `Bearer ${token}` } })
       .then((res) => setBlogs(res.data))
       .catch((err) => console.error(err));
   };
@@ -22,14 +22,14 @@ const Dashboard = () => {
 
   const handleCreate = (blog) => {
     axios
-      .post('http://localhost:5000/api/blogs', blog, { headers: { Authorization: `Bearer ${token}` } })
+      .post('https://backendbloggy.onrender.com/api/blogs', blog, { headers: { Authorization: `Bearer ${token}` } })
       .then(() => fetchBlogs())
       .catch((err) => console.error(err));
   };
 
   const handleUpdate = (blog) => {
     axios
-      .put(`http://localhost:5000/api/blogs/${editingBlog._id}`, blog, {
+      .put(`https://backendbloggy.onrender.com/api/blogs/${editingBlog._id}`, blog, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/blogs/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+      .delete(`https://backendbloggy.onrender.com/api/blogs/${id}`, { headers: { Authorization: `Bearer ${token}` } })
       .then(() => fetchBlogs())
       .catch((err) => console.error(err));
   };

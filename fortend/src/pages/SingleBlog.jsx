@@ -9,7 +9,7 @@ const SingleBlog = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await axios.get(`/api/blog/${id}`);
+                const response = await axios.get(`https://backendbloggy.onrender.com/api/blog/${id}`);
                 setBlog(response.data);
             } catch (error) {
                 console.error('Error fetching blog:', error);

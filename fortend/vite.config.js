@@ -8,5 +8,6 @@ export default defineConfig({
       '/api': 'http://localhost:5000', // Proxy '/api' to the backend running on port 5000
     },
   },
+  base: "/",
   plugins: [react()],
 });

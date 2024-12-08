@@ -16,7 +16,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/blogs', blogRoutes);
 
 // MongoDB Connection
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URI, {  })
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error(err));
 
